@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="foto.css">
+
+
+<title>Main Site</title>
+
+</head>
+<body>
+
+ 
+
+  <div class="container">
+
+    <div id="sign">
+      <h1 class="sign">Sadowski</h1>
+    </div>
+
+    <div class="card" id="People">
+       <div class="face face1">
+         <div class="content">
+          <i class="fa fa-street-view" aria-hidden="true"></i>      
+          <h3>People</h3>
+         </div>
+       </div>
+    </div>
+    
+    <div class="card" id="NatureCard">
+       <div class="face face1">
+         <div class="content">
+          <i class="fa fa-leaf" aria-hidden="true"></i>           
+          <h3>Nature</h3>
+         </div>
+       </div>
+       <!-- <div class="face face2">
+         <div class="content">
+           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?</p>
+           <a href="#" type="button">Read More</a>
+         </div>
+       </div> -->
+    </div>
+    
+    
+    <div class="card">
+       <div class="face face1">
+         <div class="content">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            <h3>Objects</h3>
+         </div>
+       </div>
+       <!-- <div class="face face2">
+         <div class="content">
+           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?</p>
+           <a href="#" type="button">Read More</a>
+         </div>
+       </div> -->
+      </div>
+    
+    <div>
+      <section id="Nature" style="display:none">
+        <img class="slide" src="2022-11-06_172124.png">
+        <img class="slide" src="pexels-lukas-rodriguez-3573351.jpg">
+        <img class="slide" src="pexels-nick-wehrli-3375116.jpg">
+        <img class="slide" src="pexels-todd-trapani-2754200.jpg">
+        <img class="slide" src="pexels-trace-hudson-2365457.jpg">
+      </section>
+    </div>
+  </div>
+</body>
+</html>
+
+<script>
+  const targetDiv = document.getElementById("Nature");
+  const btn = document.getElementById("NatureCard");
+  const sign = document.getElementById("sign");
+  btn.onclick = function () {
+  if (targetDiv.style.display !== "none") {
+    targetDiv.style.display = "none";
+  } else {
+    targetDiv.style.display = "block";
+  }
+};
+</script>
