@@ -1,9 +1,9 @@
 body{
-    display:flex;
+    display:block;
     margin: 0px;
     padding: 100px;
     min-height: 100vh;
-    background: #444;
+    background-image: linear-gradient(rgb(105, 105, 105),rgb(77, 77, 77), rgb(46, 46, 46));
     justify-content: center;
     font-family: arial;
     box-sizing: border-box;
@@ -14,15 +14,17 @@ body{
     width: 1100px;
     position: relative;
     display: flex;
+    margin: auto;
     justify-content: space-between;
-    flex-wrap:wrap;
+    align-content:center;
     align-items: center;
+    flex-wrap:wrap;
 
   }
   
-  .container .card{
+  /* .container .card{
     position: relative;
-  }
+  } */
   
   .container .card .face{
     width:300px;
@@ -56,7 +58,6 @@ body{
       10px 0 80px rgb(199, 211, 111);
      
   }
-  
   
   .container .card .face.face1 .content{
     opacity: .2;
@@ -133,9 +134,8 @@ body{
     src: url('DuckInShipahItalic-2wqo.ttf');
   }
   .sign{
-    position: sticky;
-    display: flex;
     justify-content: center;
+    display: flex;
     font-size: 200px;
     padding-left: 160px;
     padding-right: 160px;
@@ -144,7 +144,8 @@ body{
     line-height: 0.81em;
     outline: none;
     animation: animate 15s linear infinite;
-
+    margin-bottom: 250px;
+    margin-top: 50px;
   }
 
   @keyframes animate 
@@ -173,16 +174,20 @@ body{
 }
 
 .slide {
-  position: flex;
+  position: relative;
   inset: 0;
-
+  padding-top: 200px;
 }
 .slide > img{
-  display: block;
-  width: 700px;
+  display: flex;
+  width: 200px;
   height: 900px;
   object-fit: cover;
   object-position: center;
+  margin: auto;
+  justify-content: space-between;
+  align-content:center;
+  align-items: center;
 }
 .slide[data-active]{
   opacity: 1;

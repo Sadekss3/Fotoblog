@@ -4,21 +4,20 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="foto.css">
-
-
+    <link rel="stylesheet" href="my-slider.css"/>
+    <script src="ism-2.2.min.js"></script>
+    
 <title>Main Site</title>
 
 </head>
 <body>
 
- 
+  <div id="sign">
+    <h1 class="sign">Photography
+    </h1>
+  </div>
 
   <div class="container">
-
-    <div id="sign">
-      <h1 class="sign">Sadowski</h1>
-    </div>
-
     <div class="card" id="People">
        <div class="face face1">
          <div class="content">
@@ -35,14 +34,7 @@
           <h3>Nature</h3>
          </div>
        </div>
-       <!-- <div class="face face2">
-         <div class="content">
-           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?</p>
-           <a href="#" type="button">Read More</a>
-         </div>
-       </div> -->
     </div>
-    
     
     <div class="card">
        <div class="face face1">
@@ -51,36 +43,56 @@
             <h3>Objects</h3>
          </div>
        </div>
-       <!-- <div class="face face2">
-         <div class="content">
-           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?</p>
-           <a href="#" type="button">Read More</a>
-         </div>
-       </div> -->
-      </div>
-    
-    <div>
-      <section id="Nature" style="display:none">
-        <img class="slide" src="2022-11-06_172124.png">
-        <img class="slide" src="pexels-lukas-rodriguez-3573351.jpg">
-        <img class="slide" src="pexels-nick-wehrli-3375116.jpg">
-        <img class="slide" src="pexels-todd-trapani-2754200.jpg">
-        <img class="slide" src="pexels-trace-hudson-2365457.jpg">
-      </section>
     </div>
   </div>
+
+  <div class="ism-slider" data-transition_type="zoom" data-interval="10000" data-radio_type="thumbnail" id="my-slider">
+    <ol>
+      <li>
+        <img src="2022-11-06_172124.png">
+      </li>
+      <li>
+        <img src="beautiful-701678_1280.jpg">
+      </li>
+      <li>
+        <img src="summer-192179_1280.jpg">
+      </li>
+      <li>
+        <img src="pexels-lukas-rodriguez-3573351.jpg">
+      </li>
+      <li>
+        <img src="pexels-nick-wehrli-3375116.jpg">
+      </li>
+      <li>
+        <img src="pexels-todd-trapani-2754200.jpg">
+      </li>
+      <li>
+        <img src="pexels-trace-hudson-2365457.jpg">
+      </li>
+    </ol>
+  </div>
+
 </body>
 </html>
 
 <script>
-  const targetDiv = document.getElementById("Nature");
+  const targetDiv = document.getElementById("my-slider");
+  const signDiv = document.getElementById("sign");
   const btn = document.getElementById("NatureCard");
   const sign = document.getElementById("sign");
   btn.onclick = function () {
   if (targetDiv.style.display !== "none") {
     targetDiv.style.display = "none";
+    signDiv.style.display = "block";
   } else {
     targetDiv.style.display = "block";
+    targetDiv.scrollIntoView({behavior: "smooth"});
+    signDiv.style.display = "none"
   }
+
 };
+</script>
+
+<script>
+
 </script>
